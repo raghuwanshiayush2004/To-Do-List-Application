@@ -234,7 +234,12 @@ body {
   color: #495057;
 }
 
-
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    margin: 10px;
+    border-radius: 10px;
+  }
   
   .input-section {
     flex-direction: column;
