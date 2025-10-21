@@ -32,6 +32,13 @@ function App() {
       todo.id === id ? { ...todo, completed: !todo.completed } : todo
     ))
   }
+
+    // Toggle edit mode
+  const toggleEdit = (id) => {
+    setTodos(todos.map(todo =>
+      todo.id === id ? { ...todo, isEditing: !todo.isEditing } : todo
+    ))
+  }
   // Handle input key press
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
