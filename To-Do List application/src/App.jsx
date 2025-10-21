@@ -39,6 +39,13 @@ function App() {
       todo.id === id ? { ...todo, isEditing: !todo.isEditing } : todo
     ))
   }
+
+    // Update todo text
+  const updateTodo = (id, newText) => {
+    setTodos(todos.map(todo =>
+      todo.id === id ? { ...todo, text: newText, isEditing: false } : todo
+    ))
+  }
   // Handle input key press
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
