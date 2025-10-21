@@ -25,6 +25,13 @@ function App() {
   const deleteTodo = (id) => {
     setTodos(todos.filter(todo => todo.id !== id))
   }
+
+    // Toggle completed status
+  const toggleComplete = (id) => {
+    setTodos(todos.map(todo =>
+      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    ))
+  }
   // Handle input key press
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
