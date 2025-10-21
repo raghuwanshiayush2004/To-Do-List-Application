@@ -36,13 +36,13 @@ src/
 
 ## Technologies Used
 
-React
-Vite
-javaScript
-CSS3
-HTML5
+- React
+- Vite
+- javaScript
+- CSS3
+- HTML5
 
 ## Running the Application
 
-Install dependencies : npm install
-To start the development server : npm run dev
+- Install dependencies : npm install
+- To start the development server : npm run dev
