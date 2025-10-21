@@ -20,6 +20,11 @@ function App() {
       setInputValue('')
     }
   }
+
+    // Delete todo
+  const deleteTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id))
+  }
   // Handle input key press
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
