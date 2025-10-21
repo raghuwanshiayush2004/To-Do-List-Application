@@ -7,7 +7,19 @@ function App() {
   const [todos, setTodos] = useState([])
   const [inputValue, setInputValue] = useState('')
 
- 
+ // Add new todo
+  const addTodo = () => {
+    if (inputValue.trim() !== '') {
+      const newTodo = {
+        id: Date.now(),
+        text: inputValue,
+        completed: false,
+        isEditing: false
+      }
+      setTodos([...todos, newTodo])
+      setInputValue('')
+    }
+  }
   // Handle input key press
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
